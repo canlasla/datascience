@@ -17,6 +17,11 @@ def test_doctests():
 
 
 def test_default_format():
+    fmt = ds.Formatter(min_width=1, max_width=2, etc=3)
+    assert_equal(fmt.min_width,1)
+    assert_equal(fmt.max_width, 2)
+    assert_equal(fmt.etc, 3)
+
     fmt = ds.default_formatter.format_value
     assert_equal(fmt(1.23456789), '1.23457')
     assert_equal(fmt(123456789), '123456789')
