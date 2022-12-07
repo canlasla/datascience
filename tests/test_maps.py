@@ -91,15 +91,15 @@ def test_marker_html():
     """ Tests that a Marker can be rendered. """
     ds.Marker(51.514, -0.132).show()
 
-def test_marker_copy():
-    """ Tests that a Marker can is deep copied """
-    marker1 = ds.Marker(51.514, -0.132)
-    marker2 = marker1.copy()
+# def test_marker_copy():
+#     """ Tests that a Marker can is deep copied """
+#     marker1 = ds.Marker(51.514, -0.132)
+#     marker2 = marker1.copy()
 
-    assert marker1.lat_lon == marker2.lat_lon
-    assert marker1._attrs == marker2._attrs
-    assert marker1.lat_lon is not marker2.lat_lon
-    assert marker1._attrs is not marker2._attrs
+#     assert marker1.lat_lon == marker2.lat_lon
+#     assert marker1._attrs == marker2._attrs
+#     assert marker1.lat_lon is not marker2.lat_lon
+#     assert marker1._attrs is not marker2._attrs
 
 def test_marker_map():
     """ Tests that Marker.map generates a map """
